@@ -13,7 +13,7 @@ class CategoryController extends Controller
     public function __construct()
     {
         $this->middleware('auth:sanctum')->except(['index', 'show']);
-        // $this->authorizeResource(CategoryPolicy::class, 'category');
+        $this->authorizeResource(Category::class, 'category');
     }
     /**
      * Display a listing of the resource.
