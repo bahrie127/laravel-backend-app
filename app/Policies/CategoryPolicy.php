@@ -29,13 +29,12 @@ class CategoryPolicy
      */
     public function create(User $user): bool
     {
-        return true;
+        //return true;
 
-        // if ($user->id === 21) {
-        //     return true;
-        // } else {
-        //     return false;
-        // }
+        if ($user->role === 'admin') {
+            return true;
+        }
+        return false;
     }
 
     /**
