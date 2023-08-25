@@ -28,7 +28,7 @@ Route::post('/logout', [AuthController::class, 'logout'])
     ->middleware('auth:sanctum');
 
 Route::post('image/upload', [UploadController::class, 'uploadImage']);
-Route::post('image/upload-muliple', [UploadController::class, 'uploadMultipleImage']);
+Route::post('image/upload-multiple', [UploadController::class, 'uploadMultipleImage']);
 
 Route::apiResource('categories', CategoryController::class);
 Route::apiResource('products', ProductController::class);
