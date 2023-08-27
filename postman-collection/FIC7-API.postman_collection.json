@@ -97,7 +97,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"items\":[\n        {\n            \"id\":1,\n            \"productName\":\"Sepatu Adidas\",\n            \"price\": 600000,\n            \"qty\": 1\n        },\n        {\"id\":1,\n            \"productName\":\"Kaos Puma\",\n            \"price\": 150000,\n            \"qty\": 3\n            }\n    ],\n    \"total_price\":1072000,\n    \"delivery_address\":\"jalan perkutut A22, Manalagi, Durian, Sleman, DIY\",\n    \"courier_name\": \"JNE\",\n    \"shipping_cost\":22000,\n    \"seller_id\":2\n    \n    }\n",
+					"raw": "{\n    \"name\":\"Minuman 2fsd22\",\n    \"description\": \"minuman makanan bergizi\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -105,14 +105,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8000/api/order",
+					"raw": "localhost:8000/api/categories",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
 						"api",
-						"order"
+						"categories"
 					]
 				}
 			},
