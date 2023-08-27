@@ -1,0 +1,602 @@
+{
+	"info": {
+		"_postman_id": "12584cb5-5a05-4907-b834-19463c8344ae",
+		"name": "FIC7-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3117985"
+	},
+	"item": [
+		{
+			"name": "category gat all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Minuman\",\n    \"description\": \"minuman makanan bergizi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category get by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Minuman\",\n    \"description\": \"minuman makanan bergizi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/categories/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category save",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\":[\n        {\n            \"id\":1,\n            \"productName\":\"Sepatu Adidas\",\n            \"price\": 600000,\n            \"qty\": 1\n        },\n        {\"id\":1,\n            \"productName\":\"Kaos Puma\",\n            \"price\": 150000,\n            \"qty\": 3\n            }\n    ],\n    \"total_price\":1072000,\n    \"delivery_address\":\"jalan perkutut A22, Manalagi, Durian, Sleman, DIY\",\n    \"courier_name\": \"JNE\",\n    \"shipping_cost\":22000,\n    \"seller_id\":2\n    \n    }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/order",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Minuman 1002\",\n    \"description\": \"minuman makanan bergizi sekali\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/categories/7",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/categories/7",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product get pagination",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product save",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n          \n            \"name\": \"Mie gacoan 33\",\n            \"description\": \"Molestias magnam qui rerum laborum.\",\n            \"price\": 30000,\n            \"image_url\": \"https://via.placeholder.com/200x200.png/0088ee?text=deserunt\",\n            \"category_id\": 2\n          \n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n          \n            \"name\": \"Mie gacoan 33\",\n            \"description\": \"Molestias magnam qui rerum laborum.\",\n            \"price\": 30000,\n            \"image_url\": \"https://via.placeholder.com/200x200.png/0088ee?text=deserunt\",\n            \"category_id\": 2\n          \n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Aug 2023 14:12:53 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Aug 2023 14:12:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.22"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Mie gacoan 33\",\n    \"description\": \"Molestias magnam qui rerum laborum.\",\n    \"price\": 30000,\n    \"image_url\": \"https://via.placeholder.com/200x200.png/0088ee?text=deserunt\",\n    \"category_id\": 2,\n    \"user_id\": 1,\n    \"updated_at\": \"2023-08-23T14:12:53.000000Z\",\n    \"created_at\": \"2023-08-23T14:12:53.000000Z\",\n    \"id\": 103\n}"
+				}
+			]
+		},
+		{
+			"name": "auth logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "9|laravel_sanctum_esFmpXRCHEbFeU9Ma3OvrOBwtRbHS4LmjsehalQjb2e3cb70",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"admin@fic.com\",\n    \"password\": \"123456\"    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"bahri@gmail.com\",\n    \"password\": \"123456\"    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth get user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|laravel_sanctum_r5BhSz7l8EOjDzPoDEiq3VOxLYAPgfgHNRkOQlah190b2239",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"saiful@gmail.com\",\n    \"password\": \"12345678\",\n    \"name\":\"saiful\"    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth upload image",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image[]",
+							"type": "file",
+							"src": "/Users/bahri/Pictures/1024.png"
+						},
+						{
+							"key": "image[]",
+							"type": "file",
+							"src": "/Users/bahri/Pictures/madu2.jpeg"
+						},
+						{
+							"key": "image[]",
+							"type": "file",
+							"src": "/Users/bahri/Pictures/para1.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/image/upload-multiple",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"image",
+						"upload-multiple"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|laravel_sanctum_Nv4lNcuonDHxzZtXp3i0SwJf8kA7oy6fppnZ7T7wee9ffdd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\":[\n        {\n            \"id\":4,\n            \"quantity\": 2\n        },\n        {\"id\":8,\n            \"quantity\": 3\n            }\n    ],\n    \"total_price\":600000,\n    \"delivery_address\":\"jalan perkutut A22, Manalagi, Durian, Sleman, DIY\",\n    \"seller_id\":4\n    \n    }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Callback midtrans",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"transaction_time\": \"2023-08-25 22:21:56\",\n  \"transaction_status\": \"settlement\",\n  \"transaction_id\": \"0da69a4a-07bb-4224-a26e-9dab3936efac\",\n  \"status_message\": \"midtrans payment notification\",\n  \"status_code\": \"200\",\n  \"signature_key\": \"4f50ed6a443848b772f2013fd97a034aede79eb84870abc1b4e16ac402b5f5e57313af7c46714686fad3b07bad679868b83978356c2f9bcba896db48fb5de3dd\",\n  \"settlement_time\": \"2023-08-25 22:22:04\",\n  \"payment_type\": \"bri_epay\",\n  \"order_id\": \"1692976902\",\n  \"merchant_id\": \"G579360179\",\n  \"gross_amount\": \"1212468.00\",\n  \"fraud_status\": \"accept\",\n  \"expiry_time\": \"2023-08-26 00:21:56\",\n  \"currency\": \"IDR\",\n  \"approval_code\": \"1692976917031\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/midtrans/notification/handling",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"midtrans",
+						"notification",
+						"handling"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
