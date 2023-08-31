@@ -29,10 +29,9 @@ class OrderController extends Controller
             ]);
         }
 
-        //manggil service midtrans untuk dapatin payment url
         $midtrans = new CreatePaymentUrlService();
         $paymentUrl = $midtrans->getPaymentUrl($order->load('user', 'orderItems'));
-        // dd($paymentUrl);
+
         $order->update([
             'payment_url' => $paymentUrl
         ]);
